@@ -5,19 +5,19 @@ app.config(function ($routeProvider) {
 		templateUrl: 'partials/panel/dealer.html'
 	})
 	   $routeProvider.when('/dealers', {
-            templateUrl: 'partials/notavailable.html'
+            templateUrl: 'partials/dealer/dealers.html'
 	   })
 	   $routeProvider.when('/createdealer', {
-		  templateUrl: 'partials/createDealer.html'
+		  templateUrl: 'partials/dealer/createDealer.html'
 	   })
     $routeProvider.when('/customerservice', {
         templateUrl: 'partials/panel/customerservice.html'
     })
 	   $routeProvider.when('/customer', {
-		  templateUrl: 'partials/customer.html'
+		  templateUrl: 'partials/customerService/customer.html'
 	   })
 	   $routeProvider.when('/createCustomer', {
-            templateUrl: 'partials/createcustomer.html'
+            templateUrl: 'partials/customerService/createcustomer.html'
 	   })
         $routeProvider.when('/calender', {
 		  templateUrl: 'partials/notavailable.html'
@@ -77,10 +77,10 @@ app.config(function ($routeProvider) {
 		templateUrl: 'partials/panel/pim.html'
 	})
 	   $routeProvider.when('/product', {
-            templateUrl: 'partials/notavailable.html'
+            templateUrl: 'partials/pim/products.html'
 	   })
         $routeProvider.when('/createProduct', {
-            templateUrl: 'partials/notavailable.html'
+            templateUrl: 'partials/pim/createProduct.html'
 	   })
 	   $routeProvider.when('/categoryBuilder', {
             templateUrl: 'partials/notavailable.html'
