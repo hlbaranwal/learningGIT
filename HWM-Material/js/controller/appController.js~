@@ -1,0 +1,31 @@
+var app = angular.module('ecommerceApp.appController',[]);
+
+app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope,$mdSidenav){
+}]);
+
+<<<<<<< Updated upstream
+=======
+app.controller('createCustomerCtrl',function($scope,$http){
+	$scope.createPerson=function(){
+        var sendData =[{firstName:$scope.firstName,lastName:$scope.lastName,emailId:$scope.emailId}];
+        $http.post('https://localhost:8443/partymgr/control/createPerson',{data:sendData}).success(function(response){
+        $scope.dataReceived=response;
+        });
+    }
+    $scope.myf=function(){
+        alert("Customer is created!");
+    }
+});
+
+app.controller('customerCtrl',function($scope,$http){
+    $http.post('https://localhost:8443/ofbizdemo/control/findAllPerson')
+        .success(function(response){
+            $scope.dataReceived=response.mylist;
+          });
+});
+>>>>>>> Stashed changes
+
+
+
+
+
