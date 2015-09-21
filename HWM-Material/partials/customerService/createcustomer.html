@@ -1,0 +1,29 @@
+<div ng-controller="createCustomerCtrl" ng-submit="create()" layout="column">
+<form>
+	<md-content layout-padding class="autoScroll">
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>First Name*</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstName" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Last Name*</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastName" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container >
+<!--			 Use floating placeholder instead of label -->
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="emailId" type="email" placeholder="Email*" ng-required="true">
+		</md-input-container>
+        <div layout="row" layout-wra><div flex="90"></div>
+		<md-button ng-click="createPerson(); myf()" class="md-raised md-primary" type="submit">Submit</md-button>
+        </div>
+        <div>
+            <h1>{{dataReceived}}</h1>
+        </div>
+  </md-content>
+</form>
+ </div>
