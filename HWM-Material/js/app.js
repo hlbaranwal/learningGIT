@@ -1,4 +1,4 @@
-var app = angular.module('ecommerceApp', ['ecommerceApp.appController', 'ngMaterial', 'ngRoute']);
+var app = angular.module('ecommerceApp', ['ecommerceApp.appController','ngMaterial', 'ngRoute']);
 
 app.config(function ($routeProvider) {
 	$routeProvider.when('/panel', {
