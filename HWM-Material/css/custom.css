@@ -88,7 +88,17 @@ table tr td{
      
 }
 .search input::-webkit-input-placeholder{
-    opacity: .5;
+    opacity: .8;
     font-family: 'FontAwesome';
     font-size: 20px;
+    color: aqua;
+}
+.search input:hover::-webkit-input-placeholder, .search input:focus::-webkit-input-placeholder{
+    color: #999;}
+.fc-aqua{
+    color: aqua;
+}
+@font-face{
+    font-family:'FontAwesome';
+    src:url(/css/font-awesome/fonts/fontawesome-webfont.ttf);
 }
