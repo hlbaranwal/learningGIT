@@ -23,5 +23,12 @@
     	<description>Delete an Ofbiz Demo record</description>
     	<auto-attributes include="pk" mode="IN" optional="false"/>
 	</service>
+	
+	<service name="createCustomer" default-entity-name="" engine="java" location="com.hotwaxmedia.ofbizdemo.services.CreateCustomer" invoke="createCustomer" auth="false">
+    	<description>Create Customer with email_id</description>
+    	<attribute name="firstName" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="lastName" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="emailAddress" type="String" mode="INOUT" optional="true"/>
+	</service>
 	    
 </services>

@@ -1105,7 +1105,7 @@ under the License.
 
     <!-- Party Invitation Services -->
     <service name="createPartyInvitation" engine="simple"
-            location="component://party/script/org/ofbiz/party/party/PartyInvitationServices.xml" invoke="createPartyInvitation">
+            location="component://party/script/org/ofbiz/party/party/PartyInvitationServices.xml" auth="false" invoke="createPartyInvitation">
         <description>Create Party Invitation</description>
         <auto-attributes entity-name="PartyInvitation" include="pk" mode="IN" optional="true"/>
         <auto-attributes entity-name="PartyInvitation" include="nonpk" mode="IN" optional="true"/>
