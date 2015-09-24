@@ -4,7 +4,7 @@ app.controller('createCustomerCtrl',function($scope,$http){
         $scope.dataReceived=response;
         });
     }
-    /*$scope.myf=function(){
+    $scope.myf=function(){
         alert("Customer is created!");
-    }*/
+    }
 });

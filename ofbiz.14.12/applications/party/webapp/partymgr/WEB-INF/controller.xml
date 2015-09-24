@@ -60,7 +60,7 @@ under the License.
     <request-map uri="PartyInvitationRoleAssocs"><security https="true" auth="true"/><response name="success" type="view" value="PartyInvitationRoleAssocs"/></request-map>
  <!--Party Invitation Services-->
     <request-map uri="createPartyInvitation">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPartyInvitation"/>
         <response name="success" type="view" value="editPartyInvitation"/>
         <response name="error" type="view" value="editPartyInvitation"/>

@@ -22,7 +22,7 @@ under the License.
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
 
     <!-- Party Invitation Services -->
-    <simple-method method-name="createPartyInvitation" short-description="Create a PartyInvitation">
+    <simple-method method-name="createPartyInvitation" short-description="Create a PartyInvitation" login-required="false">
         <make-value entity-name="PartyInvitation" value-field="newEntity"/>
         <sequenced-id sequence-name="PartyInvitation" field="newEntity.partyInvitationId"/>
         <field-to-result field="newEntity.partyInvitationId" result-name="partyInvitationId"/>
