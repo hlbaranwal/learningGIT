@@ -13,19 +13,24 @@
 <body layout="column" ng-controller="AppCtrl">
     <md-toolbar>
         <div class="md-toolbar-tools">
-            <h2>
-                <span class="fc-aqua">Hotwax Commerce</span>
-            </h2>
+            <a href="#panel"><div class="logo">
+                <h2>
+                    <span class="fc-aqua">Hotwax Commerce</span>
+                </h2>
+            </div></a>
             <span flex></span>
                 <div class="search">
                     <input type="text" placeholder="&#xf002;&ensp; Search....">
+                    <md-tooltip md-visible="search.showTooltip">
+                        Search Here
+                    </md-tooltip>
                 </div>
             <span flex></span>
             <md-button class="md-icon-button" aria-label="More">
              <i class="fa fa-sign-out fa-2x fc-aqua"></i>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="More">
-                <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                <md-tooltip md-visible="signout.showTooltip">
+                    Sign Out
+                </md-tooltip>
             </md-button>
         </div>
     </md-toolbar>
