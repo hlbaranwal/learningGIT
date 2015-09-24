@@ -1,6 +1,6 @@
 app.controller('createCustomerCtrl',function($scope,$http){
 	$scope.createPerson=function(){
-        $http.post('https://localhost:8443/partymgr/control/createPerson',{firstName:$scope.firstName,lastName:$scope.lastName,emailId:$scope.emailId}).success(function(response){
+        $http.post('https://localhost:8443/ofbizdemo/control/insertService',{firstName:$scope.firstName,lastName:$scope.lastName,emailId:$scope.emailId}).success(function(response){
         $scope.dataReceived=response;
         });
     }
