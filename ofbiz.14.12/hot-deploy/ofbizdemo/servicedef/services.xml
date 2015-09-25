@@ -30,5 +30,11 @@
     	<attribute name="lastName" type="String" mode="INOUT" optional="true"/>
     	<attribute name="emailAddress" type="String" mode="INOUT" optional="true"/>
 	</service>
+	
+	 <service name="customerService" engine="groovy" 
+    		location="component://ofbizdemo/script/com/hotwaxmedia/ofbizdemo/customerService.groovy" 
+    		invoke="customerService">
+    	<attribute name="mylist" type="List" mode="OUT" optional="true"/>
+    </service>
 	    
 </services>

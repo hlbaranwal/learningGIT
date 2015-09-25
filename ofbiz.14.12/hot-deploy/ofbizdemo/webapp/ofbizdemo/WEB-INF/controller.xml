@@ -77,6 +77,13 @@
 		<response name="error" type="request" value="json"/>
 	</request-map>
 	
+	<request-map uri="customerService">
+		<security https="true" auth="false"/>
+		<event type="service" path="" invoke="customerService"/>
+		<response name="success" type="request" value="json"/>
+		<response name="error" type="request" value="json"/>
+	</request-map>
+	
 	<request-map uri="createCustomer">
 		<security https="true" auth="false"/>
 		<event type="service" path="" invoke="createCustomer"/>

@@ -1,0 +1,262 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Profile</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            Add
+        </md-button>
+        <md-button>
+            <i class="fa fa-refresh"></i>
+            <span>Additional Info</span>
+        </md-button>
+        <md-button aria-label="More">
+            <i class="fa fa-cart-plus"></i>
+            Create Order
+        </md-button>
+        <md-button aria-label="More">
+            More...
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    All Detials of profile of user is shown here!
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>User Login</span>
+        </h2>
+        <span flex></span>
+        <md-button aria-label="More">
+            Add User Login
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <table>
+        <thead>
+            <th>User Login</th>
+            <th>Enabled</th>
+            <th>Disabled Date</th>
+            <th>Successive Failed Logins</th>
+            <th>Reset Password Mail</th>
+        </thead>
+        <tbody>
+            <td>User.name</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tbody>
+    </table>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>EasyErpAdminRoles</span>
+        </h2>
+    </div>
+</md-toolbar>
+<md-content>
+    <md-chips>
+        <md-chip>Hockey</md-chip>
+        <md-chip>Lacrosse</md-chip>
+        <md-chip>Baseball</md-chip>
+        <!-- Static chips are transcluded -->
+        <md-chip>{{ctrl.chipText}}</md-chip>
+    </md-chips>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Orders</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-refresh fa-2x"></i>
+            <md-tooltip md-visible="refresh.showTooltip">
+                Refresh
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <table>
+        <thead>
+            <th>Order</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <td>order.number</td>
+            <td>17/07/1993</td>
+            <td>100000000000000</td>
+            <td>hsiij</td>
+        </tbody>
+    </table>
+</md-content>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Returns</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-refresh fa-2x"></i>
+            <md-tooltip md-visible="refresh.showTooltip">
+                Refresh
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    No Return found of this  User
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Wish List</span>
+        </h2>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>No Wish List found for User</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Qualifications</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            Add
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>No Qualifications found for User</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Shipping Addresses</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-home fa-2x"></i>
+            <md-tooltip md-visible="address.showTooltip">
+                Add Ship
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>Shipping Adress is no Added yet!</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Credit Cards</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-credit-card fa-2x"></i>
+            <md-tooltip md-visible="credit.showTooltip">
+                Add Card Detial
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>No Credit Card found for User</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Reviews</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-refresh fa-2x"></i>
+            <md-tooltip md-visible="refresh.showTooltip">
+                Refresh
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>Review not found yet!</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Channels</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            Add
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <table>
+        <thead>
+            <th>Channel</th>
+            <th>Web Page</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <td>Show Channel number here</td>
+            <td>show.webpage</td>
+            <td>Yes/No</td>
+        </tbody>
+    </table>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Contents</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            Add
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <h2>No Content found for User</h2>
+</md-content>
+
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Classifications</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            Add
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <md-chips>
+        <md-chip>Hockey</md-chip>
+        <md-chip>Lacrosse</md-chip>
+        <md-chip>Baseball</md-chip>
+        <!-- Static chips are transcluded -->
+        <md-chip>{{ctrl.chipText}}</md-chip>
+    </md-chips>
+</md-content>
