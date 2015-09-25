@@ -100,3 +100,10 @@ table tr td{
     height: 100%;
     padding-top: 20px;
 }
+md-content div div .nostyle{
+    list-style: none;
+    padding-top: 10px;
+}
+.fc-blue{
+    color: blue;
+}

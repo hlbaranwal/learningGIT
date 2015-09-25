@@ -1,0 +1,87 @@
+<md-dialog ng-controller="profileCtrl">
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Additional Information</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  
+      <md-dialog-content ng-init="tab=1" style="min-width:600px;max-width:800px;max-height:810px; ">
+        <div ng-show="tab==1">
+            <md-input-container>
+              <label>Nick Name</label>
+              <input type="text">
+            </md-input-container>
+          
+            <md-input-container>
+                <md-select name="myModel" ng-model="myModel" placeholder="Gender" required>
+                    <md-option value="1">Male</md-option>
+                    <md-option value="2">Female</md-option>
+                </md-select>
+                <div class="errors" ng-messages="myForm.myModel.$error" ng-if="myForm.$dirty">
+                    <div ng-message="required">Required</div>
+                </div>
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Birth Date</label>
+                <input type="date">
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Height</label>
+                <input>
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Weight</label>
+                <input>
+            </md-input-container>
+        
+            <div>
+                <span flex></span>
+                <md-button ng-click="tab=2" class="md-primary md-raised">
+                    Next
+                </md-button>
+            </div>
+            
+          </div>
+        
+        <div ng-show="tab==2">
+            <md-input-container>
+                <label>Where were you born</label>
+                <input type="text">
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Current Location</label>
+                <input type="text">
+            </md-input-container>
+        
+            <md-input-container>
+                <label>Hobbies</label>
+                <input type="text">
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Motto</label>
+                <input type="text">
+            </md-input-container>
+          
+            <md-input-container>
+                <label>Discipline</label>
+                <input type="text">
+            </md-input-container>
+            <md-button class="md-primary md-raised">
+                Save
+            </md-button>
+        </div>  
+          
+      
+  </md-dialog-content>
+  </form>
+</md-dialog>
