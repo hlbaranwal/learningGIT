@@ -101,6 +101,17 @@ table tr td{
   height: 100%;
   padding-top: 20px;
 }
+
+/*-----------------------------------------------
+START
+Name:Harsh Jain 
+Page:Promotion-Page
+------------------------------------------------
+
+*/
+.asterisk {
+  color: #F00;
+
 md-content div div .nostyle{
   list-style: none;
   padding-top: 10px;
@@ -202,4 +213,8 @@ md-toolbar-custom {
 }
 .vert-offset-bottom-0{
   margin-bottom: 0em;
+=======
+    color: blue;
+>>>>>>> 6c20403eaa6541d6583601f08d85c3c3072f63c4
+>>>>>>> 49bab246d6db654a9e30f091e5c936b5d4f6da02
 }
