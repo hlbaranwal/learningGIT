@@ -84,6 +84,12 @@
 		<response name="error" type="request" value="json"/>
 	</request-map>
 	
+	<request-map uri="createProductService">
+		<security https="true" auth="false"/>
+		<event type="service" path="" invoke="createProductService"/>
+		<response name="success" type="request" value="json"/>
+		<response name="error" type="request" value="json"/>
+	</request-map>
     <!-- View Mappings -->
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizdemo/widget/OfbizDemoScreens.xml#FindOfbizDemo"/>
     <view-map name="main" type="screen" page="component://ofbizdemo/widget/OfbizDemoScreens.xml#main"/>
