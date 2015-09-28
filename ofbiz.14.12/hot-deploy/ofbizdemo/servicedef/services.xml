@@ -31,10 +31,23 @@
     	<attribute name="emailAddress" type="String" mode="INOUT" optional="true"/>
 	</service>
 	
+<<<<<<< HEAD
+	<service name="createProductService" default-entity-name="" engine="java" location="com.hotwaxmedia.ofbizdemo.services.CreateProduct" invoke="createProductService" auth="false">
+    	<description>Create Customer with email_id</description>
+    	<attribute name="productId" type="String" mode="IN" optional="true"/>
+    	<attribute name="productName" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="priceDetailText" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="productTypeId" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="internalName" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="weight" type="String" mode="INOUT" optional="true"/>
+    	<attribute name="geoId" type="String" mode="INOUT" optional="true"/>
+	</service>
+=======
 	 <service name="customerService" engine="groovy" 
     		location="component://ofbizdemo/script/com/hotwaxmedia/ofbizdemo/customerService.groovy" 
     		invoke="customerService">
     	<attribute name="mylist" type="List" mode="OUT" optional="true"/>
     </service>
+>>>>>>> 49bab246d6db654a9e30f091e5c936b5d4f6da02
 	    
 </services>

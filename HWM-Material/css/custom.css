@@ -9,7 +9,7 @@
 md-sidenav{
 	width:15% !important;
 	min-width:200px !important;
-    max-width: 25% !important;
+  max-width: 25% !important;
 }
 md-sidenav .bg-green:hover{
 	background-color:#00796B !important;
@@ -44,7 +44,7 @@ md-content .right-panel .btn-tile:hover{
 }
 md-content .right-panel .bg-color{
 	background-color:#00796B !important;
-		transition: all .4s ease;
+  transition: all .4s ease;
 
 }
 md-content  .right-panel .bg-color:hover{
@@ -52,10 +52,10 @@ md-content  .right-panel .bg-color:hover{
 	transition: all .4s ease;
 }
 table{
-    width:100% !important;
+  width:100% !important;
 }
 table tr td{
-    text-align: center;
+  text-align: center;
 }
 
 .fg-gray{
@@ -69,41 +69,152 @@ table tr td{
 }
 
 .search input{
-    width: 200%;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 2px; 
-    padding: 6px 12px;
-    color: #00796B;
-    background-color: rgba(0,77,64,.6);
+  width: 200%;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 2px; 
+  padding: 6px 12px;
+  color: #00796B;
+  background-color: rgba(0,77,64,.6);
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: all .3s ease;
+  transition: all .3s ease;
 }
 .search input:hover, .search input:focus{
-    background-color: #DDD;
-    transition: all .3s ease;
-     
+  background-color: #DDD;
+  transition: all .3s ease;
+
 }
 .search input::-webkit-input-placeholder{
-    opacity: .8;
-    font-family: 'FontAwesome';
-    font-size: 20px;
-    color: aqua;
+  opacity: .8;
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  color: #FFF;
 }
 .search input:hover::-webkit-input-placeholder, .search input:focus::-webkit-input-placeholder{
-    color: #999;}
+  color: #999;
+}
 .fc-aqua{
-    color: aqua;
+  color: aqua;
 }
 .logo{
-    height: 100%;
-    padding-top: 20px;
+  height: 100%;
+  padding-top: 20px;
 }
+
+/*-----------------------------------------------
+START
+Name:Harsh Jain 
+Page:Promotion-Page
+------------------------------------------------
+
+*/
+.asterisk {
+  color: #F00;
+
 md-content div div .nostyle{
-    list-style: none;
-    padding-top: 10px;
+  list-style: none;
+  padding-top: 10px;
 }
 .fc-blue{
+  color: blue;
+}
+.profile-page .md-toolbar-tools {
+  height: 50px !important;
+  padding: 0 8px ;
+}
+
+md-toolbar-custom {
+  background-color: ;
+  color: #FFF;
+}
+
+/*Vertical Offsets*/
+
+/* Vertical Top Offset */
+.vert-offset-top-25{
+  margin-top: 25em;
+}
+.vert-offset-top-12{
+  margin-top: 12em;
+}
+.vert-offset-top-11{
+  margin-top: 11em;
+}
+.vert-offset-top-10{
+  margin-top: 10em;
+}
+.vert-offset-top-9{
+  margin-top: 9em;
+}
+.vert-offset-top-8{
+  margin-top: 8em;
+}
+.vert-offset-top-7 {
+  margin-top: 7em;
+}
+.vert-offset-top-6{
+  margin-top: 6em;
+}
+.vert-offset-top-5{
+  margin-top: 5em;
+}
+.vert-offset-top-4{
+  margin-top: 4em;
+}
+.vert-offset-top-3{
+  margin-top: 3em;
+}
+.vert-offset-top-2{
+  margin-top: 2em;
+}
+.vert-offset-top-1{
+  margin-top: 1em;
+}
+.vert-offset-top-0{
+  margin-top: 0em;
+}
+/* Vertical Offset Bottom */
+.vert-offset-bottom-12{
+  margin-bottom: 12em;
+}
+.vert-offset-bottom-11{
+  margin-bottom: 11em;
+}
+.vert-offset-bottom-10{
+  margin-bottom: 10em;
+}
+.vert-offset-bottom-9{
+  margin-bottom: 9em;
+}
+.vert-offset-bottom-8{
+  margin-bottom: 8em;
+}
+.vert-offset-bottom-7{
+  margin-bottom: 7em;
+}
+.vert-offset-bottom-6{
+  margin-bottom: 6em;
+}
+.vert-offset-bottom-5{
+  margin-bottom: 5em;
+}
+.vert-offset-bottom-4{
+  margin-bottom: 4em;
+}
+.vert-offset-bottom-3{
+  margin-bottom: 3em;
+}
+.vert-offset-bottom-2{
+  margin-bottom: 2em;
+}
+.vert-offset-bottom-1{
+  margin-bottom: 1em;
+}
+.vert-offset-bottom-0{
+  margin-bottom: 0em;
+=======
     color: blue;
+>>>>>>> 6c20403eaa6541d6583601f08d85c3c3072f63c4
+>>>>>>> 49bab246d6db654a9e30f091e5c936b5d4f6da02
 }

@@ -38,7 +38,7 @@ under the License.
         <override name="longDescription" allow-html="any"/>
     </service>
     <service name="createProduct" default-entity-name="Product" engine="simple"
-                location="component://product/script/org/ofbiz/product/product/ProductServices.xml" invoke="createProduct" auth="true">
+                location="component://product/script/org/ofbiz/product/product/ProductServices.xml" invoke="createProduct" auth="false">
         <description>Create a Product</description>
         <implements service="interfaceProduct"/>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -612,7 +612,7 @@ under the License.
     <!-- ======================================== -->
     <!-- Product Catalog Services -->
     <!-- ======================================== -->
-    <service name="createProdCatalog" default-entity-name="ProdCatalog" engine="entity-auto" invoke="create" auth="true">
+    <service name="createProdCatalog" default-entity-name="ProdCatalog" engine="entity-auto" invoke="create" auth="false">
         <description>Create a ProdCatalog</description>
         <permission-service service-name="catalogPermissionCheck" main-action="CREATE"/>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -652,7 +652,7 @@ under the License.
         <auto-attributes include="pk" mode="IN" optional="false"/>
     </service>
 
-    <service name="addProdCatalogToParty" default-entity-name="ProdCatalogRole" engine="entity-auto" invoke="create" auth="true">
+    <service name="addProdCatalogToParty" default-entity-name="ProdCatalogRole" engine="entity-auto" invoke="create" auth="false">
         <description>Add ProdCatalog To Party</description>
         <permission-service service-name="prodCatalogToPartyPermissionCheck" main-action="CREATE"/>
         <auto-attributes include="pk" mode="IN" optional="false"/>
