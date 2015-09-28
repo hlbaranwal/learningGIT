@@ -100,3 +100,23 @@ table tr td{
     height: 100%;
     padding-top: 20px;
 }
+<<<<<<< HEAD
+
+/*-----------------------------------------------
+START
+Name:Harsh Jain 
+Page:Promotion-Page
+------------------------------------------------
+
+*/
+.asterisk {
+  color: #F00;
+=======
+md-content div div .nostyle{
+    list-style: none;
+    padding-top: 10px;
+}
+.fc-blue{
+    color: blue;
+>>>>>>> 6c20403eaa6541d6583601f08d85c3c3072f63c4
+}

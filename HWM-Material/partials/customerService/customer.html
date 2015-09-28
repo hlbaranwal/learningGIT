@@ -10,10 +10,10 @@
 		</tr>	
 	</thead>
 	<tbody ng-controller="customerCtrl as customerCtr">
-		<tr ng-repeat="customer in dataReceived | filter:searchCustomer | orderBy:'partyId'" class="md-table-content-row">
-			<td class="md-table-content">{{customer.partyId}}</td>
-			<td class="md-table-content">{{customer.firstName}}</td>
-			<td class="md-table-content" >{{customer.lastName}}</td>
+		<tr ng-repeat="customer in dataReceived | filter:searchCustomer | orderBy:'-partyId'" class="md-table-content-row">
+            <td class="md-table-content" style="text-align:left ; padding-left:;"><a href="#profile">{{customer.firstName}} {{customer.lastName}}</a></td>
+			<td class="md-table-content" style="text-align:left ; padding-left:;">{{customer.partyId}}</td>
+			<td class="md-table-content"  style="text-align:left ; padding-left:;">{{customer.emailAddress}}</td>
 		</tr>
 	<tbody>
 </table>
