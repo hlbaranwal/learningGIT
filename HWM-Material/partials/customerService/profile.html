@@ -176,20 +176,19 @@ No Return found of this  User
 <md-content class="vert-offset-bottom-1">
 <h2>No Qualifications found for User</h2>
 </md-content>
-
 <md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Shipping Addresses</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    <i class="fa fa-home fa-2x"></i>
-    <md-tooltip md-visible="address.showTooltip">
-    Add Ship
-</md-tooltip>
-</md-button>
-</div>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Shipping Addresses</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+            <i class="fa fa-truck fa-2x"></i>
+            <md-tooltip md-visible="address.showTooltip">
+                Add Ship
+            </md-tooltip>
+        </md-button>
+    </div>
 </md-toolbar-custom>
 <md-content class="vert-offset-bottom-1">
 <h2>Shipping Adress is no Added yet!</h2>
@@ -210,7 +209,18 @@ No Return found of this  User
 </div>
 </md-toolbar-custom>
 <md-content class="vert-offset-bottom-1">
-<h2>No Credit Card found for User</h2>
+<div style="border:2px solid gray;">
+        <div layout="row">
+        <span class="fa fa-cc-visa fa-3x fc-blue"></span>
+        <span flex></span>
+        <span class="fa fa-pencil fa-lg"></span>
+        <span class="fa fa-trash-o fa-lg"></span>
+        </div>
+        <div layout="row">
+            <span flex="33"></span>
+            <h2>1213 432 4132 5343</h2>
+        </div>
+    </div>
 </md-content>
 
 <md-toolbar-custom>
