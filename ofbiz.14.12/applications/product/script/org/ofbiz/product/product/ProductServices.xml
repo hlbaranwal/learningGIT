@@ -20,7 +20,7 @@ under the License.
 
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
-    <simple-method method-name="createProduct" short-description="Create a Product">
+    <simple-method method-name="createProduct" short-description="Create a Product" login-required="false">
         <check-permission permission="CATALOG" action="_CREATE">
             <alt-permission permission="CATALOG_ROLE" action="_CREATE"/>
             <fail-property resource="ProductUiLabels" property="ProductCatalogCreatePermissionError"/>
