@@ -1,306 +1,336 @@
 <div class="profile-page">
     <div ng-controller="profileCtrl">
         <md-toolbar-custom>
-        <div class="md-toolbar-tools">
-            <h2>
+            <div class="md-toolbar-tools">
+                <h2>
                 <span>Profile</span>
-            </h2>
-            <span flex></span>
-            <md-button ng-click="showAdd($event)">
-            <i class="fa fa-phone"></i>
-            Add Phone No.
-        </md-button>
-        <md-button ng-click="showAdditionalInfo($event)">
-        <i class="fa fa-refresh"></i>
-        <span>Additional Info</span>
-    </md-button>
-    <md-button ng-click="showCreateOrder($event)">
-    <i class="fa fa-cart-plus"></i>
-    Create Order
-</md-button>
-<md-button>
-More...
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<div layout="row" layout-wrap>
-    <div flex>
-        <li class="nostyle">fjiswdjij</li>
-        <li class="nostyle">fjiswdjij</li>
-        <li class="nostyle">fjiswdjij</li>
+                </h2>
+                <span flex></span>
+                <md-button ng-click="showAdd($event)" class="button-font-size-12">
+                    <i class="fa fa-phone"></i> Add Phone No.
+                </md-button>
+                <md-button ng-click="showAdditionalInfo($event)" class="button-font-size-12">
+                    <i class="fa fa-refresh"></i>
+                    <span>Additional Info</span>
+                </md-button>
+                <md-button ng-click="showCreateOrder($event)" class="button-font-size-12">
+                    <i class="fa fa-cart-plus"></i> Create Order
+                </md-button>
+                <md-button class="button-font-size-12">
+                    More...
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1" style="border:2px solid gray;">
+            <div layout="row" layout-wrap>
+                <div flex>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <md-button>
+                        <i class="fc-blue">Add User Login</i>
+                        <i class="fa fa-plus fc-blue"></i>
+                    </md-button>
+                </div>
+                <div flex>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <md-button>
+                        <i class="fc-blue">Add mail Address</i>
+                        <i class="fa fa-plus fc-blue"></i>
+                    </md-button>
+                </div>
+                <div flex>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <li class="nostyle">fjiswdjij</li>
+                    <md-button>
+                        <i class="fc-blue">Show All()</i>
+                    </md-button>
+                </div>
+            </div>
+        </md-content>
+        <div class="vert-offset-top-25" style="height:70px;"></div>
 
-        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
-        <md-button>
-        <i class="fc-blue">Add User Login</i>
-        <i class="fa fa-plus fc-blue"></i>
-    </md-button>
-</div>
-<div flex>
-    <li class="nostyle">fjiswdjij</li>
-    <li class="nostyle">fjiswdjij</li>
-    <li class="nostyle">fjiswdjij</li>
-    <md-button>
-    <i class="fc-blue">Add mail Address</i>
-    <i class="fa fa-plus fc-blue"></i>
-</md-button>
-</div>
-<div flex>
-    <li class="nostyle">fjiswdjij</li>
-    <li class="nostyle">fjiswdjij</li>
-    <li class="nostyle">fjiswdjij</li>
-    <md-button>
-    <i class="fc-blue">Show All()</i>
-</md-button>
-</div>
-</div>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
         <span>User Login</span>
     </h2>
-    <span flex></span>
-    <md-button ng-click="showAddUserLogin($event)">
-    Add User Login
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<table>
-    <thead>
-        <th>User Login</th>
-        <th>Enabled</th>
-        <th>Disabled Date</th>
-        <th>Successive Failed Logins</th>
-        <th>Reset Password Mail</th>
-    </thead>
-    <tbody>
-        <td>User.name</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tbody>
-</table>
-</md-content>
+                <span flex></span>
+                <md-button ng-click="showAddUserLogin($event)" class="button-font-size-12">
+                    Add User Login
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <table>
+                <thead>
+                    <th>User Login</th>
+                    <th>Enabled</th>
+                    <th>Disabled Date</th>
+                    <th>Successive Failed Logins</th>
+                    <th>Reset Password Mail</th>
+                </thead>
+                <tbody>
+                    <td>User.name</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tbody>
+            </table>
+        </md-content>
 
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>EasyErpAdminRoles</span>
-    </h2>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<md-chips>
-<md-chip>Hockey</md-chip>
-<md-chip>Lacrosse</md-chip>
-<md-chip>Baseball</md-chip>
-<!-- Static chips are transcluded -->
-<md-chip>{{ctrl.chipText}}</md-chip>
-</md-chips>
-</md-content>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>EasyErpAdminRoles</span>
+                </h2>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <md-chips>
+                <md-chip>Hockey</md-chip>
+                <md-chip>Lacrosse</md-chip>
+                <md-chip>Baseball</md-chip>
+                <!-- Static chips are transcluded -->
+                <md-chip>{{ctrl.chipText}}</md-chip>
+            </md-chips>
+        </md-content>
 
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
         <span>Orders</span>
     </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    <i class="fa fa-refresh fa-2x"></i>
-    <md-tooltip md-visible="refresh.showTooltip">
-    Refresh
-</md-tooltip>
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<table>
-    <thead>
-        <th>Order</th>
-        <th>Date</th>
-        <th>Amount</th>
-        <th></th>
-    </thead>
-    <tbody>
-        <td>order.number</td>
-        <td>17/07/1993</td>
-        <td>100000000000000</td>
-        <td>hsiij</td>
-    </tbody>
-</table>
-</md-content>
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Returns</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    <i class="fa fa-refresh fa-2x"></i>
-    <md-tooltip md-visible="refresh.showTooltip">
-    Refresh
-</md-tooltip>
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-No Return found of this  User
-</md-content>
+                <span flex></span>
+                <md-button class="md-icon-button">
+                    <i class="fa fa-refresh"></i>
+                    <md-tooltip md-visible="refresh.showTooltip">
+                        Refresh
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <table>
+                <thead>
+                    <th>Order</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <td>order.number</td>
+                    <td>17/07/1993</td>
+                    <td>100000000000000</td>
+                    <td>hsiij</td>
+                </tbody>
+            </table>
+        </md-content>
 
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Wish List</span>
-    </h2>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<h2>No Wish List found for User</h2>
-</md-content>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Returns</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button">
+                    <i class="fa fa-refresh"></i>
+                    <md-tooltip md-visible="refresh.showTooltip">
+                        Refresh
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            No Return found of this User
+        </md-content>
 
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Qualifications</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    Add
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<h2>No Qualifications found for User</h2>
-</md-content>
-<md-toolbar-custom>
-    <div class="md-toolbar-tools">
-        <h2>
-            <span>Shipping Addresses</span>
-        </h2>
-        <span flex></span>
-        <md-button class="md-icon-button" aria-label="More">
-            <i class="fa fa-truck fa-2x"></i>
-            <md-tooltip md-visible="address.showTooltip">
-                Add Ship
-            </md-tooltip>
-        </md-button>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Wish List</span>
+                </h2>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <h2>No Wish List found for User</h2>
+        </md-content>
+
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Qualifications</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <h2>No Qualifications found for User</h2>
+        </md-content>
+        
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Shipping Addresses</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" class="button-font-size-12">
+                    <i class="fa fa-truck"></i>
+                    <md-tooltip md-visible="address.showTooltip">
+                        Add Ship
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <h2>Shipping Adress is no Added yet!</h2>
+        </md-content>
+            <div flex="2"></div>
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Credit Cards</span>
+                </h2>
+                
+                <md-button class="md-icon-button" class="button-font-size-12">
+                    <i class="fa fa-credit-card"></i>
+                    <md-tooltip md-visible="credit.showTooltip">
+                        Add Card Detial
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <div style="border:2px solid gray;">
+                <div layout="row">
+                    <span class="fa fa-cc-visa fa-3x fc-blue"></span>
+                    <span flex></span>
+                    <span class="fa fa-pencil fa-lg"></span>
+                    <span class="fa fa-trash-o fa-lg"></span>
+                </div>
+                <div layout="row">
+                    <span flex="33"></span>
+                    <h2>1213 432 4132 5343</h2>
+                </div>
+            </div>
+        </md-content>
+        
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Reviews</span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button">
+                    <i class="fa fa-refresh"></i>
+                    <md-tooltip md-visible="refresh.showTooltip">
+                        Refresh
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <h2>Review not found yet!</h2>
+        </md-content>
+
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Channels</span>
+                </h2>
+                <span flex></span>
+                <md-button class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <table>
+                <thead>
+                    <th>Channel</th>
+                    <th>Web Page</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <td>Show Channel number here</td>
+                    <td>show.webpage</td>
+                    <td>Yes/No</td>
+                </tbody>
+            </table>
+        </md-content>
+
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Contents</span>
+                </h2>
+                <span flex></span>
+                <md-button class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <h2>No Content found for User</h2>
+        </md-content>
+
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Classifications</span>
+                </h2>
+                <span flex></span>
+                <md-button class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            <md-chips>
+                <md-chip>Hockey</md-chip>
+                <md-chip>Lacrosse</md-chip>
+                <md-chip>Baseball</md-chip>
+                <!-- Static chips are transcluded -->
+                <md-chip>{{ctrl.chipText}}</md-chip>
+            </md-chips>
+        </md-content>
+        
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Favourite Products</span>
+                </h2>
+                <span flex></span>
+                <md-button class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+           <img/>
+        </md-content>
+        
+        <md-toolbar-custom>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Commissions</span>
+                </h2>
+                <span flex></span>
+                <md-button class="button-font-size-12">
+                    Add
+                </md-button>
+            </div>
+        </md-toolbar-custom>
+        <md-content class="vert-offset-bottom-1">
+            There is no commision now!
+        </md-content>
+        
     </div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<h2>Shipping Adress is no Added yet!</h2>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Credit Cards</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    <i class="fa fa-credit-card fa-2x"></i>
-    <md-tooltip md-visible="credit.showTooltip">
-    Add Card Detial
-</md-tooltip>
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<div style="border:2px solid gray;">
-        <div layout="row">
-        <span class="fa fa-cc-visa fa-3x fc-blue"></span>
-        <span flex></span>
-        <span class="fa fa-pencil fa-lg"></span>
-        <span class="fa fa-trash-o fa-lg"></span>
-        </div>
-        <div layout="row">
-            <span flex="33"></span>
-            <h2>1213 432 4132 5343</h2>
-        </div>
-    </div>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Reviews</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    <i class="fa fa-refresh fa-2x"></i>
-    <md-tooltip md-visible="refresh.showTooltip">
-    Refresh
-</md-tooltip>
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<h2>Review not found yet!</h2>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Channels</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    Add
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<table>
-    <thead>
-        <th>Channel</th>
-        <th>Web Page</th>
-        <th>Status</th>
-    </thead>
-    <tbody>
-        <td>Show Channel number here</td>
-        <td>show.webpage</td>
-        <td>Yes/No</td>
-    </tbody>
-</table>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Contents</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    Add
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<h2>No Content found for User</h2>
-</md-content>
-
-<md-toolbar-custom>
-<div class="md-toolbar-tools">
-    <h2>
-        <span>Classifications</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button">
-    Add
-</md-button>
-</div>
-</md-toolbar-custom>
-<md-content class="vert-offset-bottom-1">
-<md-chips>
-<md-chip>Hockey</md-chip>
-<md-chip>Lacrosse</md-chip>
-<md-chip>Baseball</md-chip>
-<!-- Static chips are transcluded -->
-<md-chip>{{ctrl.chipText}}</md-chip>
-</md-chips>
-</md-content>
-</div>
 </div>
