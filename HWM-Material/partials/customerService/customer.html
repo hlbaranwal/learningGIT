@@ -1,19 +1,47 @@
+<style>
+	.sidenav-custom{
+		width:20px !important;
+		overflow-x: hidden;
+	}
+
+	.container table {
+		margin: 0 auto;
+		width: 70%;
+	}
+	thead {
+		background-color: #004C3F;
+		color: #FFF;
+	}	
+	th { padding: .5em 0 .5em 1em; }
+	tr:nth-of-type(even) {
+		background: #EEE;
+	}
+	.container td {
+		text-align: left;
+		padding: .5em 0 .5em 1em;
+	}
+	.container .td-phone { width: 25%; }
+	.container .td-email { width: 35%; }
+</style>
+
 <md-input-container class="md-icon-float" >
-	<input ng-model="searchCustomer" placeholder="Search here by Name/Phone/Email/" type="text" ng-required="true">
+<input ng-model="searchCustomer" placeholder="Search here by Name/Phone/Email/" type="text" ng-required="true">
 </md-input-container>
-<table id="table" class="md-table">
-	<thead>
-		<tr class="md-table-headers-row">
-			<th class="md-table-header">Name</th>
-			<th>Phone</th>
-			<th>Email</th>
-		</tr>	
-	</thead>
-	<tbody ng-controller="customerCtrl as customerCtr">
-		<tr ng-repeat="customer in dataReceived | filter:searchCustomer | orderBy:'-partyId'" class="md-table-content-row">
-            <td class="md-table-content" style="text-align:left ; padding-left:;"><a href="#profile">{{customer.firstName}} {{customer.lastName}}</a></td>
-			<td class="md-table-content" style="text-align:left ; padding-left:;">{{customer.partyId}}</td>
-			<td class="md-table-content"  style="text-align:left ; padding-left:;">{{customer.emailAddress}}</td>
-		</tr>
-	<tbody>
-</table>
+<div class="container">
+	<table id="table" class="md-table">
+		<thead>
+			<tr class="md-table-headers-row">
+				<th class="th-name">Name</th>
+				<th class="th-phone">Phone</th>
+				<th class="th-email">Email</th>
+			</tr>	
+		</thead>
+		<tbody ng-controller="customerCtrl as customerCtr">
+			<tr ng-repeat="customer in dataReceived | filter:searchCustomer | orderBy:'-partyId'" class="md-table-content-row">
+				<td class="td-name"><a href="#profile">{{customer.firstName}} {{customer.lastName}}</a></td>
+				<td class="td-phone">{{customer.partyId}}</td>
+				<td class="td-email">{{customer.emailAddress}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
