@@ -1,13 +1,111 @@
-<div ng-controller="PromotionController" layout="column">
-	<form name="PromotionForm">
-		<div layout layout-sm="column">
-			<md-input-container>
-				<label>Name
-					<span class="asterisk">(*)
-					</span>
-				</label>
-				<input type="text" placeholder="Enter Promotion Name">
-			</md-input-container>	
-		</div>
-	</form>
-</div>
+ <form-header ng-init="tab=1"><a class="md-button" ng-click="tab=1">Promotion Details</a> <a class="md-button" ng-click="tab=2">Active-Date</a> <a class="md-button" ng-click="tab=3">Apply On</a></form-header>
+	<md-content layout-padding class="autoScroll">
+      <md-content ng-show="tab==1">
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Promotion-Name</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstname" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Description</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Promotion Will Be Active</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating placeholder instead of label -->
+            <label>Primary Email</label>
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="email" type="email" placeholder="Email (required)" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float">
+			<!-- Use floating placeholder instead of label -->
+            <label>Partner Logo(5mb Max)</label>
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="email" type="file" style="opacity:0;padding-right:50px ; margin-left:0px" class="" placeholder="Email (required)" ng-required="true">
+		</md-input-container>
+        <md-button ng-click="tab=2" class="md-raised md-primary" type="submit">Next</md-button>
+        </md-content>
+        
+        <md-content ng-show="tab==2">
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Attention Name</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstname" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Address 1</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Country</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container >
+			<!-- Use floating placeholder instead of label -->
+            <label>City</label>
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="email" type="text" placeholder="Email (required)" ng-required="true">
+		</md-input-container>
+        <md-input-container >
+			<!-- Use floating placeholder instead of label -->
+            <label>Billing Account Limit</label>
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="email" type="text" placeholder="Email (required)" ng-required="true">
+		</md-input-container>
+        <md-button ng-click="tab=3" class="md-raised md-primary" type="submit">Next</md-button>
+        </md-content>
+        
+        <md-content ng-show="tab==3">
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>First Name</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstname" type="text" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Last Name</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstname" type="text" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Title</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
+			<input ng-model="firstname" type="text" ng-required="true">
+		</md-input-container>
+        
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Phone</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>
+		<md-input-container >
+			<!-- Use floating placeholder instead of label -->
+            <label>Email Address</label>
+			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+			<input ng-model="email" type="email" placeholder="Email (required)" ng-required="true">
+		</md-input-container>
+        <md-input-container class="md-icon-float" >
+			<!-- Use floating label instead of placeholder -->
+			<label>Note</label>
+			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
+			<input ng-model="lastname" type="text" ng-required="true">
+		</md-input-container>        
+        <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+        </md-content>
+		

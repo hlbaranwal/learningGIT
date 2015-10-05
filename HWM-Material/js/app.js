@@ -59,10 +59,10 @@ app.config(function ($routeProvider) {
 		templateUrl: 'partials/panel/merchandise.html'
 	})
         $routeProvider.when('/promotion', {
-            templateUrl: 'partials/notavailable.html'
+            templateUrl: 'partials/merchandise/Promotion.html'
 	   })
 	   $routeProvider.when('/createPromotion', {
-            templateUrl: 'partials/notavailable.html'
+            templateUrl: 'partials/merchandise/CreatePromotion.html'
 	   })
 	   $routeProvider.when('/sale', {
             templateUrl: 'partials/notavailable.html'
