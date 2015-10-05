@@ -1,25 +1,48 @@
 <div ng-controller="createCustomerCtrl" ng-submit="create()" layout="column">
-<form>
+<form name="createCustomer" ng-submit="submitForm(createCustomer.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
 	<md-content layout-padding class="autoScroll">
-		<md-input-container class="md-icon-float" >
-			<!-- Use floating label instead of placeholder -->
+        <!--FIRST NAME -->
+        <div ng-class="{ 'has-error' : createCustomer.name.$invalid && !createCustomer.name.$pristine }">
+		  <md-input-container class="md-icon-float">
 			<label>First Name*</label>
 			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="firstname"></md-icon>
-			<input ng-model="firstName" type="text" ng-required="true">
-		</md-input-container>
-		<md-input-container class="md-icon-float" >
-			<!-- Use floating label instead of placeholder -->
+			<input ng-model="firstName" name="name" type="text" ng-required="true">
+		  </md-input-container>
+            <div layout="row">
+                <div flex></div>
+                <p ng-show="createCustomer.name.$invalid && !createCustomer.name.$pristine" class="help-block">
+                    First name is required.</p>
+            </div>    
+        </div>
+        <!-- lastName -->
+        <div ng-class="{ 'has-error' : createCustomer.lastName.$invalid && !createCustomer.lastName.$pristine }">
+		  <md-input-container class="md-icon-float">
 			<label>Last Name*</label>
 			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
-			<input ng-model="lastName" type="text" ng-required="true">
-		</md-input-container>
-		<md-input-container >
-<!--			 Use floating placeholder instead of label -->
+			<input name="lastName" ng-model="lastName" type="text" ng-required="true" ng-minlength="3" ng-maxlength="12">
+		  </md-input-container>
+            <div layout="row">
+                <div flex></div>
+                <p ng-show="createCustomer.lastName.$error.minlength" class="help-block">Last Name is too short.</p>
+                <p ng-show="createCustomer.lastName.$error.maxlength" class="help-block">Last Name is too long.</p>
+            </div>   
+        </div>
+        <!-- EMAIL -->
+        <div ng-class="{ 'has-error' : createCustomer.email.$invalid && !createCustomer.email.$pristine }">
+		  <md-input-container>
 			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
-			<input ng-model="emailId" type="email" placeholder="Email*" ng-required="true">
-		</md-input-container>
-        <div layout="row" layout-wra><div flex="90"></div>
-		<md-button ng-click="createCustomer(); myf()" class="md-raised md-primary" type="submit">Submit</md-button>
+			<input name="email" ng-model="emailId" type="email" placeholder="Email*" ng-required="true">
+		  </md-input-container>
+            <div layout="row">
+                <div flex></div>
+                <p ng-show="createCustomer.email.$invalid && !createCustomer.email.$pristine" class="help-block">
+                    Enter a valid email.</p>
+            </div>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <div layout="row">
+            <div flex="90"></div>
+            <md-button class="md-raised md-primary" type="submit">Submit</md-button>
         </div>
         <div>
             <h1>{{dataReceived}}</h1>
@@ -27,3 +50,7 @@
   </md-content>
 </form>
  </div>
+
+
+
+

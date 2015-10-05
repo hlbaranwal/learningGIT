@@ -1,0 +1,30 @@
+<md-dialog>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add Sales Channel</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>    
+        </md-toolbar>
+        <md-dialog-content>
+             <md-input-container>
+                 <md-select ng-model="store" placeholder="Website*">
+                     <md-option value="1">Ebay</md-option>
+                     <md-option value="2">Amazon</md-option>
+                     <md-option value="3">Flipkart</md-option>
+                     <md-option value="4">Not Naked</md-option>
+                 </md-select>
+            </md-input-container>
+            
+            <div layout="row">
+                <div flex></div>
+                <md-button class="md-primary md-raised">
+                    Add
+                </md-button>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

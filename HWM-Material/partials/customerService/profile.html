@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/InnerStyleSheet.css">
 <div class="profile-page">
     <div ng-controller="profileCtrl">
         <md-toolbar-custom>
@@ -27,7 +28,7 @@
                     <li class="nostyle">fjiswdjij</li>
                     <li class="nostyle">fjiswdjij</li>
                     <li class="nostyle">fjiswdjij</li>
-                    <md-button>
+                    <md-button ng-click="showAddUserLogin($event)">
                         <i class="fc-blue">Add User Login</i>
                         <i class="fa fa-plus fc-blue"></i>
                     </md-button>
@@ -36,7 +37,7 @@
                     <li class="nostyle">fjiswdjij</li>
                     <li class="nostyle">fjiswdjij</li>
                     <li class="nostyle">fjiswdjij</li>
-                    <md-button>
+                    <md-button ng-click="showAddMailAddress($event)">
                         <i class="fc-blue">Add mail Address</i>
                         <i class="fa fa-plus fc-blue"></i>
                     </md-button>
@@ -51,8 +52,6 @@
                 </div>
             </div>
         </md-content>
-        <div class="vert-offset-top-25" style="height:70px;"></div>
-
         <md-toolbar-custom>
             <div class="md-toolbar-tools">
                 <h2>
@@ -166,7 +165,7 @@
                     <span>Qualifications</span>
                 </h2>
                 <span flex></span>
-                <md-button class="md-icon-button" class="button-font-size-12">
+                <md-button class="md-icon-button button-font-size-12" ng-click="showAddQualification($event)">
                     Add
                 </md-button>
             </div>
@@ -181,8 +180,8 @@
                     <span>Shipping Addresses</span>
                 </h2>
                 <span flex></span>
-                <md-button class="md-icon-button" class="button-font-size-12">
-                    <i class="fa fa-truck"></i>
+                <md-button ng-click="showAddShippingAddress($event)">
+                    <i class="fa fa-truck"></i>  Add
                     <md-tooltip md-visible="address.showTooltip">
                         Add Ship
                     </md-tooltip>
@@ -192,14 +191,14 @@
         <md-content class="vert-offset-bottom-1">
             <h2>Shipping Adress is no Added yet!</h2>
         </md-content>
-            <div flex="2"></div>
+        
         <md-toolbar-custom>
             <div class="md-toolbar-tools">
                 <h2>
                     <span>Credit Cards</span>
                 </h2>
-                
-                <md-button class="md-icon-button" class="button-font-size-12">
+                <span flex></span>
+                <md-button ng-click="showAddCreditCard($event)">
                     <i class="fa fa-credit-card"></i>
                     <md-tooltip md-visible="credit.showTooltip">
                         Add Card Detial
@@ -246,7 +245,7 @@
                     <span>Channels</span>
                 </h2>
                 <span flex></span>
-                <md-button class="button-font-size-12">
+                <md-button class="button-font-size-12" ng-click="showAddSalesChannel($event)">
                     Add
                 </md-button>
             </div>
@@ -260,8 +259,8 @@
                 </thead>
                 <tbody>
                     <td>Show Channel number here</td>
-                    <td>show.webpage</td>
-                    <td>Yes/No</td>
+                    <td>Show Channel number here</td>
+                    <td>Show Channel number here</td>
                 </tbody>
             </table>
         </md-content>
@@ -287,7 +286,7 @@
                     <span>Classifications</span>
                 </h2>
                 <span flex></span>
-                <md-button class="button-font-size-12">
+                <md-button class="button-font-size-12" ng-click="showAddClassificationGroup($event)">
                     Add
                 </md-button>
             </div>

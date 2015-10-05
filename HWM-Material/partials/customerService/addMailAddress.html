@@ -1,0 +1,49 @@
+<md-dialog>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add Phone</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>    
+        </md-toolbar>
+        <md-dialog-content>
+            <h2>Select Mail Purpose</h2>
+            <div layout="row">
+             <md-input-container>
+                 <label>
+                    <input type="checkbox">
+                    <span class="fa fa-envelope fa-4x"></span>
+                     Primary Email
+                 </label>
+            </md-input-container>
+            
+            <md-input-container>
+                 <label>
+                    <input type="checkbox">
+                    <span class="fa fa-truck fa-4x"></span>
+                     Shipping Emai Email
+                 </label>
+            </md-input-container>
+            
+            <md-input-container>
+                 <i class="fa fa-rupee fa-4x"></i>
+                 <input type="checkbox">
+            </md-input-container>
+            </div>
+            <md-input-container>
+              <label>
+                    <input type="checkbox">
+                    <span class="fa fa-money fa-4x"></span>
+                     Billing Emai Email
+                 </label>
+            </md-input-container>
+
+            <md-button class="md-primary md-raised">
+                Add
+            </md-button>
+        </md-dialog-content>
+    </form>
+</md-dialog>

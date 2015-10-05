@@ -31,7 +31,10 @@
 			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
 			<input ng-model="email" type="file" style="opacity:0;padding-right:50px ; margin-left:0px" class="" placeholder="Email (required)" ng-required="true">
 		</md-input-container>
-        <md-button ng-click="tab=2" class="md-raised md-primary" type="submit">Next</md-button>
+        <div layout="row">
+            <div flex="90"></div>
+            <md-button ng-click="tab=2" class="md-raised md-primary" type="submit">Next</md-button>
+        </div>
         </md-content>
         
         <md-content ng-show="tab==2">
@@ -65,7 +68,10 @@
 			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
 			<input ng-model="email" type="text" placeholder="Email (required)" ng-required="true">
 		</md-input-container>
+        <div layout="row">
+            <div flex="90"></div>
         <md-button ng-click="tab=3" class="md-raised md-primary" type="submit">Next</md-button>
+            </div>
         </md-content>
         
         <md-content ng-show="tab==3">
@@ -95,8 +101,6 @@
 			<input ng-model="lastname" type="text" ng-required="true">
 		</md-input-container>
 		<md-input-container >
-			<!-- Use floating placeholder instead of label -->
-            <label>Email Address</label>
 			<md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
 			<input ng-model="email" type="email" placeholder="Email (required)" ng-required="true">
 		</md-input-container>
@@ -106,6 +110,9 @@
 			<md-icon md-svg-src="img/icons/ic_person_24px.svg" class="lastname"></md-icon>
 			<input ng-model="lastname" type="text" ng-required="true">
 		</md-input-container>        
-        <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+        <div layout="row">
+            <div flex="90"></div>
+            <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+        </div>
         </md-content>
 		

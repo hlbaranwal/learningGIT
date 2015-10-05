@@ -1,0 +1,66 @@
+<md-dialog>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add Shipping Address</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>    
+        </md-toolbar>
+        <md-dialog-content>
+            <md-input-container>
+              <label>Name*</label>
+              <input type="text">
+            </md-input-container>
+            
+            <md-input-container>
+              <label>Attention Name</label>
+              <input type="text">
+            </md-input-container>
+            
+            <md-input-container>
+              <label>Address</label>
+              <input type="text">
+            </md-input-container>
+            
+            <div layout="row"> 
+            <md-input-container flex="50">
+                 <md-select ng-model="CSR" placeholder="Country*">
+                     <md-option value="1">Platinum Certificate</md-option>
+                     <md-option value="2">Gold Certificate</md-option>
+                     <md-option value="3">Silver Certificate</md-option>
+                 </md-select>
+            </md-input-container>
+            
+            <md-input-container flex="50">
+                 <md-select ng-model="CSR" placeholder="State*">
+                     <md-option value="1">Platinum Certificate</md-option>
+                     <md-option value="2">Gold Certificate</md-option>
+                     <md-option value="3">Silver Certificate</md-option>
+                 </md-select>
+            </md-input-container>
+            </div>
+            
+            <div layout="row">
+                <md-input-container>
+                    <label>City*</label>
+                    <input type="text">
+                </md-input-container>
+            
+                <md-input-container>
+                    <label>Zip Code*</label>
+                    <input type="text">
+                </md-input-container>
+            </div>
+            
+            <div layout="row">
+                <div flex></div>
+                <md-button class="md-primary md-raised">
+                Add
+                </md-button>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

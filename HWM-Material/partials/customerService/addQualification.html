@@ -2,7 +2,7 @@
     <form>
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>Add User Login</h2>
+                <h2>Add Qualification for Customers</h2>
                 <span flex></span>
                 <md-button class="md-icon-button" ng-click="cancel()">
                     <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -11,23 +11,24 @@
         </md-toolbar>
         <md-dialog-content>
              <md-input-container>
-                <label>Email Address*</label>
-                 <input type="text">
+                 <md-select ng-model="CSR" placeholder="CSR Certification">
+                     <md-option value="1">Platinum Certificate</md-option>
+                     <md-option value="2">Gold Certificate</md-option>
+                     <md-option value="3">Silver Certificate</md-option>
+                 </md-select>
             </md-input-container>
             
              <md-input-container>
-              <label>Password*</label>
-              <input type="password">
+              <label>Description</label>
+              <input type="text">
             </md-input-container>
             
-            <md-input-container>
-              <label>Confirm Password*</label>
-              <input type="password">
-            </md-input-container>
-            
-            <md-button class="md-primary md-raised">
+            <div layout="row">
+                <div flex></div>
+                <md-button class="md-primary md-raised">
                 Add
-            </md-button>
+                </md-button>
+            </div>
         </md-dialog-content>
     </form>
 </md-dialog>
