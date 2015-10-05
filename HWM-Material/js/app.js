@@ -16,6 +16,9 @@ app.config(function ($routeProvider) {
 	   $routeProvider.when('/customer', {
 		  templateUrl: 'partials/customerService/customer.html'
 	   })
+        $routeProvider.when('/profile', {
+		  templateUrl: 'partials/customerService/profile.html'
+	   })
 	   $routeProvider.when('/createCustomer', {
             templateUrl: 'partials/customerService/createcustomer.html'
 	   })

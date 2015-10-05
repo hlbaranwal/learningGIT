@@ -1,0 +1,34 @@
+<md-dialog>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add Qualification for Customers</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>    
+        </md-toolbar>
+        <md-dialog-content>
+             <md-input-container>
+                 <md-select ng-model="CSR" placeholder="CSR Certification">
+                     <md-option value="1">Platinum Certificate</md-option>
+                     <md-option value="2">Gold Certificate</md-option>
+                     <md-option value="3">Silver Certificate</md-option>
+                 </md-select>
+            </md-input-container>
+            
+             <md-input-container>
+              <label>Description</label>
+              <input type="text">
+            </md-input-container>
+            
+            <div layout="row">
+                <div flex></div>
+                <md-button class="md-primary md-raised">
+                Add
+                </md-button>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

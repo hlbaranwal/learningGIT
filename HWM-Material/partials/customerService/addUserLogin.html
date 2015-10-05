@@ -1,0 +1,33 @@
+<md-dialog>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add User Login</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>    
+        </md-toolbar>
+        <md-dialog-content>
+             <md-input-container>
+                <label>Email Address*</label>
+                 <input type="text">
+            </md-input-container>
+            
+             <md-input-container>
+              <label>Password*</label>
+              <input type="password">
+            </md-input-container>
+            
+            <md-input-container>
+              <label>Confirm Password*</label>
+              <input type="password">
+            </md-input-container>
+            
+            <md-button class="md-primary md-raised">
+                Add
+            </md-button>
+        </md-dialog-content>
+    </form>
+</md-dialog>
