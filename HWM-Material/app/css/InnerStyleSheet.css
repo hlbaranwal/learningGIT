@@ -1,0 +1,8 @@
+.sidenav-custom{
+		width:50px !important;
+		overflow-x: hidden;
+	}
+    .sidenav-custom:hover{
+		width:225px !important;
+		overflow-x: hidden;
+	}

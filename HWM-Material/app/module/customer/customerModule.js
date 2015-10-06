@@ -1,4 +1,4 @@
-angular.module('ecommerceApp.customer',[]).config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
+angular.module('ecommerceApp.customer',['customer.controller']).config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
 	$stateProvider.state('customer',{
 		url : '/customer',
 		templateUrl : 'module/customer/views/customerPanel.html'
@@ -8,5 +8,8 @@ angular.module('ecommerceApp.customer',[]).config(['$stateProvider','$locationPr
 	}).state('createCustomer',{
 		url : '/customer/create',
 		templateUrl : 'module/customer/views/createcustomer.html'
+	}).state('viewCustomer',{
+		url : '/customer/profile',
+		templateUrl : 'module/customer/views/profile.html'
 	});
 }]);
