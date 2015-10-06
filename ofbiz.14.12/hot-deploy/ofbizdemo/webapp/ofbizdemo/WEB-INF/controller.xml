@@ -11,6 +11,7 @@
     <!-- Events to run on every request before security (chains exempt) -->
     <!--
     <preprocessor>
+     
     </preprocessor>
     -->
     <!-- Events to run on every request after all other processing (chains exempt) -->
@@ -22,7 +23,7 @@
 
     <!-- Request Mappings -->
     <request-map uri="updateOfbizDemo">
-    	<security https="true" auth="true"/>
+    	<security https="true" auth="true" />
     	<event type="service" invoke="updateOfbizDemo"/>
     	<response name="success" type="view" value="main"/>
 	</request-map>
