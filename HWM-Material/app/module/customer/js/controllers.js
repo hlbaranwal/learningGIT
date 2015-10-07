@@ -1,6 +1,6 @@
 angular.module("customer.controller",[]).controller('customerCtrl',function($scope,$http){
     $http.post('https://localhost:8443/ofbizdemo/control/customerService')
-        .success(function(response){
+         .success(function(response){
             $scope.dataReceived=response.mylist;
           });
 }).controller('profileCtrl',function($scope,$http,$mdDialog){
