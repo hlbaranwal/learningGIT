@@ -1,13 +1,8 @@
-angular.module("customer.controller",[]).controller('customerCtrl',function($scope,$http){
-    $http.post('https://localhost:8443/ofbizdemo/control/customerService')
-         .success(function(response){
-            $scope.dataReceived=response.mylist;
-          });
-}).controller('profileCtrl',function($scope,$http,$mdDialog){
+angular.module('profile.controller',[]).controller('profileCtrl',function($scope,$http,$mdDialog){
     $scope.showAdd = function(ev){
     $mdDialog.show({
         controller:DialogController,
-        templateUrl: 'module/customer/views/addPhone.html',
+        templateUrl: 'module/customer/views/profile/addPhone.html',
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose:true
@@ -22,7 +17,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAdditionalInfo = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/additionalInfo.html',
+      templateUrl: 'module/customer/views/profile/additionalInfo.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -37,7 +32,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddMailAddress = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addMailAddress.html',
+      templateUrl: 'module/customer/views/profile/addMailAddress.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -52,7 +47,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddUserLogin = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addUserLogin.html',
+      templateUrl: 'module/customer/views/profile/addUserLogin.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -67,7 +62,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddQualification = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addQualification.html',
+      templateUrl: 'module/customer/views/profile/addQualification.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -82,7 +77,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddShippingAddress = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addShippingAddress.html',
+      templateUrl: 'module/customer/views/profile/addShippingAddress.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -97,7 +92,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddCreditCard = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addCreditCard.html',
+      templateUrl: 'module/customer/views/profile/addCreditCard.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -112,7 +107,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddSalesChannel = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addSalesChannel.html',
+      templateUrl: 'module/customer/views/profile/addSalesChannel.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -127,7 +122,7 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     $scope.showAddClassificationGroup = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'module/customer/views/addClassificationGroup.html',
+      templateUrl: 'module/customer/views/profile/addClassificationGroup.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true
@@ -139,25 +134,4 @@ angular.module("customer.controller",[]).controller('customerCtrl',function($sco
     });
   };
     
-}).controller('createCustomerCtrl',function($scope,$http){
-  $scope.createCustomer=function(){
-        $http.post('https://localhost:8443/ofbizdemo/control/createCustomer',{firstName:$scope.firstName,lastName:$scope.lastName,emailAddress:$scope.emailId}).success(function(response){
-        $scope.dataReceived=response;
-        });
-    }
-    $scope.myf=function(){
-        alert("Customer is created!");
-    }
 });
-
-function DialogController($scope, $mdDialog) {
-  $scope.hide = function() {
-    $mdDialog.hide();
-  };
-  $scope.cancel = function() {
-    $mdDialog.cancel();
-  };
-  $scope.answer = function(answer) {
-    $mdDialog.hide(answer);
-  };
-}
