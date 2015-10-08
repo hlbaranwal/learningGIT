@@ -28,11 +28,10 @@ def customerService(){
 	try{
 	   partyPersonEli  = select("partyId","firstName","lastName","emailAddress").from(partyPersonView).queryIterator();
 	   partyPerson = partyPersonEli.getCompleteList();
-	   partyPersonEli.close();
 	   } catch (GenericEntityException e){
  		  Debug.logError(e.getMessage(), module);
 		} finally{
-		   partyPersonEli?.close();
+		   partyPersonEli.close();
 		}
  
 	 serviceResult = ServiceUtil.returnSuccess();
