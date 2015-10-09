@@ -1,85 +1,62 @@
 <html lang="en" ng-app="ecommerceApp">
 
 <head>
-    <base herf="/app/">
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/app/">
     <title>Hotwax Commerce</title>
     <link rel="stylesheet" href="css/angularMaterial/angular-material.min.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="font/googleApis.css">
-    <link rel="stylesheet" href="css/custom.css">    
-</head>
+    <link rel="stylesheet" href="css/custom.css">
 
+</head>
 <body layout="column" ng-controller="LoginController">
-    <md-toolbar ng-hide="first()">
-        <div class="md-toolbar-tools">
+    <md-toolbar>
+       <div class="md-toolbar-tools">
             <a ui-sref="dealer">
-              <div class="logo">
-                <h2>
-                    <span>Hotwax Commerce</span>
-                </h2>
-              </div>
-            </a>
-            <span flex></span>
-                <div class="search">
-                    <input type="text" placeholder="&#xf002;&ensp; Search...."/>
-                    <md-tooltip md-visible="search.showTooltip">
-                        Search Here
-                    </md-tooltip>
+                <div class="logo">
+                    <h2>
+                <span class="fc-white">Hotwax Commerce</span>
+            </h2>
+
                 </div>
-            <span flex></span>
-            <md-button class="md-icon-button" aria-label="signout">
-              <i class="fa fa-sign-out fa-2x"></i>
-              <md-tooltip md-visible="signout.showTooltip">
-                    Sign Out
-              </md-tooltip>
-            </md-button>
+            </a>
         </div>
     </md-toolbar>
-    <div layout="row" flex>
-        <div ng-hide="first()" layout="column" class="sidenav-custom" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" ng-init="tab = 'customerservice'">
-            <a ui-sref="dealer">
-               <md-button class="bg-green">Dealer</md-button>
-            </a>
-            <a ui-sref="customer">
-                <md-button class="bg-green">Customer Service</md-button>
-            </a>
-            <a ui-sref="merchandise">
-                <md-button class="bg-green">Merchandise</md-button>
-            </a>
-            <a ui-sref="pim">
-                <md-button class="bg-green">PIM</md-button>
-            </a>
-            <a ui-sref="procurement">
-                <md-button class="bg-green">Procurement</md-button>
-            </a>
-            <a ui-sref="cms">
-                <md-button class="bg-green">CMS</md-button>
-            </a>
-            <a ui-sref="warehouse">
-                <md-button class="bg-green">Warehouse</md-button>
-            </a>
-            <a ui-sref="ar_ap">
-                <md-button class="bg-green">AR/AP</md-button>
-            </a>
-            <a ui-sref="financial">
-                <md-button class="bg-green">Financial Report</md-button>
-            </a>
-            <a ui-sref="admin">
-                <md-button class="bg-green">Admin</md-button>
-            </a>
-            <a ui-sref="report">
-                <md-button class="bg-green">Report</md-button>
-            </a>
-        </div>
-        <div layout="column" flex id="content">
-            <md-content layout="column" flex class="md-padding">
-                <div ui-view></div>
+        <div style="width:40%; margin:auto; border:1px solid #00796B;">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    Login Here 
+                    <span flex></span>
+                    <md-button>Register Here!</md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <md-input-container>
+                    <label>Email-Address*</label>
+                    <input type="text" name="EmailId" ng-model="credentials.username"/>
+                </md-input-container>
+                <md-input-container>
+                    <label>Password*</label>
+                    <input type="text" name="Password" ng-model="credentials.password"/>
+                </md-input-container>
+                
+                <md-input-container>
+                    <label>Tenant Id</label>
+                    <input type="text" name="TenantId"/>
+                </md-input-container>
+            
+                <div layout="row">
+                    <div flex></div>
+                    <md-button ng-click="login()" class="md-primary md-raised">
+                    Add
+                    </md-button>
+                </div>
             </md-content>
         </div>
-    </div>
+                
     <!-- Angular Material Dependencies -->
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>
@@ -111,6 +88,7 @@
     <script type="text/javascript" src="module/financial/financialModule.js"></script>
     <script type="text/javascript" src="module/report/reportModule.js"></script>
     <!--End Angular Controller-->
+                
     
 </body>
 

@@ -1,6 +1,11 @@
 angular.module('ecommerceApp.dealer',[]).config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
 	$stateProvider.state('dealer',{
 		url : '/dealer',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/dealer.html'
 	}).state('alldealers',{
 		url : '/dealer/all',
