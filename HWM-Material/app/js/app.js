@@ -13,7 +13,6 @@ app.config(['$stateProvider','$locationProvider',function($stateProvider,$locati
 		templateUrl : 'login.html'
 	})
 }]).run(['$rootScope','$state','$cookieStore','authService',function($rootScope,$state,$cookieStore,authService){
-	$state.go("login");
 	$rootScope.$on('$stateChangeError', function(event, toState,toParams, fromState, fromParams, error) {
 		if(error.unAuthorized) {
 			$state.go("login");

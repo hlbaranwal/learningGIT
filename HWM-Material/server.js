@@ -13,7 +13,6 @@ function main(argv) {
     'GET': createServlet(StaticServlet),
     'HEAD': createServlet(StaticServlet)
   }).start(Number(argv[2]) || DEFAULT_PORT);
-  console.log("called main");
 }
 
 function escapeHtml(value) {
@@ -21,12 +20,10 @@ function escapeHtml(value) {
     replace('<', '&lt;').
     replace('>', '&gt;').
     replace('"', '&quot;');
-    console.log("called escapeHtml");
 }
 
 function createServlet(Class) {
   var servlet = new Class();
-  console.log("called createServlet");
   return servlet.handleRequest.bind(servlet);
 }
 
@@ -39,31 +36,25 @@ function createServlet(Class) {
 function HttpServer(handlers) {
   this.handlers = handlers;
   this.server = http.createServer(this.handleRequest_.bind(this));
-  console.log("called HttpServer");
 }
 
-HttpServer.prototype.start = function(port) {
+HttpServer.prototype.start = function(port) {  
   this.port = port;
   this.server.listen(port);
-  console.log("called start");
   util.puts('Http Server running at http://localhost:' + port + '/');
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {
   var parsed = url.parse(urlString);
-  console.log(parsed);
   parsed.pathname = url.resolve('/', parsed.pathname);
-  console.log("called parseUrl_");
   return url.parse(url.format(parsed), true);
 };
 
 HttpServer.prototype.handleRequest_ = function(req, res) {
   var logEntry = req.method + ' ' + req.url;
-  console.log("called handleRequest_");
   if (req.headers['user-agent']) {
     logEntry += ' ' + req.headers['user-agent'];
   }
-  util.puts(logEntry);
   req.url = this.parseUrl_(req.url);
   var handler = this.handlers[req.method];
   if (!handler) {
@@ -94,7 +85,6 @@ StaticServlet.MimeMap = {
 };
 
 StaticServlet.prototype.handleRequest = function(req, res) {
-  console.log("called handleRequest");
   var self = this;
   var path = ('./' + req.url.pathname).replace('//','/').replace(/%(..)/g, function(match, hex){
     return String.fromCharCode(parseInt(hex, 16));
@@ -161,7 +151,6 @@ StaticServlet.prototype.sendRedirect_ = function(req, res, redirectUrl) {
       'Content-Type': 'text/html',
       'Location': redirectUrl
   });
-  console.log("called sendRedirect_");
   res.write('<!doctype html>\n');
   res.write('<title>301 Moved Permanently</title>\n');
   res.write('<h1>Moved Permanently</h1>');
@@ -175,7 +164,6 @@ StaticServlet.prototype.sendRedirect_ = function(req, res, redirectUrl) {
 };
 
 StaticServlet.prototype.sendFile_ = function(req, res, path) {
-  console.log("called sendFile_");
   var self = this;
   var file = fs.createReadStream(path);
   res.writeHead(200, {
@@ -196,7 +184,6 @@ StaticServlet.prototype.sendFile_ = function(req, res, path) {
 };
 
 StaticServlet.prototype.sendDirectory_ = function(req, res, path) {
-  console.log("called sendDirectory_");
   var self = this;
   if (path.match(/[^\/]$/)) {
     req.url.pathname += '/';
@@ -218,6 +205,7 @@ StaticServlet.prototype.sendDirectory_ = function(req, res, path) {
         if (stat.isDirectory()) {
           files[index] = fileName + '/';
         }
+        
         if (!(--remaining))
           return self.writeDirectoryIndex_(req, res, path, files);
       });
@@ -226,7 +214,6 @@ StaticServlet.prototype.sendDirectory_ = function(req, res, path) {
 };
 
 StaticServlet.prototype.writeDirectoryIndex_ = function(req, res, path, files) {
-  console.log("called writeDirectoryIndex_");
   path = path.substring(1);
   res.writeHead(200, {
     'Content-Type': 'text/html'
@@ -236,7 +223,7 @@ StaticServlet.prototype.writeDirectoryIndex_ = function(req, res, path, files) {
     return;
   }
   res.write('<!doctype html>\n');
-  res.write('<title>' + escapeHtml(path) + '</title>\n');
+  res.write('<title>' + escapeHtml(path)+'Here We are' + '</title>\n');
   res.write('<style>\n');
   res.write('  ol { list-style-type: none; font-size: 1.2em; }\n');
   res.write('</style>\n');

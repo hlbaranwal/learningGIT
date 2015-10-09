@@ -13,7 +13,7 @@
 </head>
 
 <body layout="column" ng-controller="LoginController">
-    <md-toolbar ng-hide="first()">
+    <md-toolbar>
         <div class="md-toolbar-tools">
             <a ui-sref="dealer">
               <div class="logo">
@@ -39,7 +39,7 @@
         </div>
     </md-toolbar>
     <div layout="row" flex>
-        <div ng-hide="first()" layout="column" class="sidenav-custom" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" ng-init="tab = 'customerservice'">
+        <div layout="column" class="sidenav-custom" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" ng-init="tab = 'customerservice'">
             <a ui-sref="dealer">
                <md-button class="bg-green">Dealer</md-button>
             </a>
