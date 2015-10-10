@@ -36,12 +36,14 @@ function createServlet(Class) {
 function HttpServer(handlers) {
   this.handlers = handlers;
   this.server = http.createServer(this.handleRequest_.bind(this));
+  console.log("Called first");
 }
 
 HttpServer.prototype.start = function(port) {  
   this.port = port;
   this.server.listen(port);
   util.puts('Http Server running at http://localhost:' + port + '/');
+  console.log("Called second");
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {
@@ -51,6 +53,7 @@ HttpServer.prototype.parseUrl_ = function(urlString) {
 };
 
 HttpServer.prototype.handleRequest_ = function(req, res) {
+  console.log("Called Third");
   var logEntry = req.method + ' ' + req.url;
   if (req.headers['user-agent']) {
     logEntry += ' ' + req.headers['user-agent'];
