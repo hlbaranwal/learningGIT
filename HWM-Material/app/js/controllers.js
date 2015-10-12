@@ -5,9 +5,9 @@ angular.module('ecommerApp.controllers',[]).controller('LoginController',['$scop
 	$scope.login = function(){
 
 		$scope.buttonText = "Logging in...";
-  
+  		
 		authService.login($scope.credentials.username,$scope.credentials.password).then(function(data){
-			$state.go('dealer');
+			$state.go('home.dealer');
 		},function(err){
 			$scope.invalidLogin=true;
 		}).finally(function(){
@@ -15,7 +15,9 @@ angular.module('ecommerApp.controllers',[]).controller('LoginController',['$scop
 		});
 	}
 
-	$scope.first = function(){
-		return true;
+    $scope.logout=function(){
+		authService.logout().then(function(){
+			$state.go('login');
+		});
 	}
 }]);

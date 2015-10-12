@@ -1,0 +1,67 @@
+<md-toolbar ng-controller="LoginController">
+        <div class="md-toolbar-tools">
+            <a ui-sref="home.dealer">
+              <div class="logo">
+                <h2>
+                    <span>Hotwax Commerce</span>
+                </h2>
+              </div>
+            </a>
+            <span flex></span>
+                <div class="search">
+                    <input type="text" placeholder="&#xf002;&ensp; Search...."/>
+                    <md-tooltip md-visible="search.showTooltip">
+                        Search Here
+                    </md-tooltip>
+                </div>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="signout" ng-click="logout()">
+              <i class="fa fa-sign-out fa-2x"></i>
+              <md-tooltip md-visible="signout.showTooltip">
+                    Sign Out
+              </md-tooltip>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <div layout="row" flex>
+        <div layout="column" class="sidenav-custom" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" ng-init="tab = 'customerservice'">
+            <a ui-sref="home.dealer">
+               <md-button class="bg-green">Dealer</md-button>
+            </a>
+            <a ui-sref="home.customer">
+                <md-button class="bg-green">Customer Service</md-button>
+            </a>
+            <a ui-sref="home.merchandise">
+                <md-button class="bg-green">Merchandise</md-button>
+            </a>
+            <a ui-sref="home.pim">
+                <md-button class="bg-green">PIM</md-button>
+            </a>
+            <a ui-sref="home.procurement">
+                <md-button class="bg-green">Procurement</md-button>
+            </a>
+            <a ui-sref="home.cms">
+                <md-button class="bg-green">CMS</md-button>
+            </a>
+            <a ui-sref="home.warehouse">
+                <md-button class="bg-green">Warehouse</md-button>
+            </a>
+            <a ui-sref="home.ar_ap">
+                <md-button class="bg-green">AR/AP</md-button>
+            </a>
+            <a ui-sref="home.financial">
+                <md-button class="bg-green">Financial Report</md-button>
+            </a>
+            <a ui-sref="home.admin">
+                <md-button class="bg-green">Admin</md-button>
+            </a>
+            <a ui-sref="home.report">
+                <md-button class="bg-green">Report</md-button>
+            </a>
+        </div>
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding">
+                <div ui-view></div>
+            </md-content>
+        </div>
+    </div>

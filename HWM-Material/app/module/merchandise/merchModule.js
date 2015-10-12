@@ -1,18 +1,43 @@
 angular.module('ecommerceApp.merchandise',[]).config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
-	$stateProvider.state('merchandise',{
+	$stateProvider.state('home.merchandise',{
 		url : '/merchandise',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/merchandise/views/merchandise.html'
-	}).state('createPromotion',{
-		url : '/createPromotion',
+	}).state('home.createPromotion',{
+		url : '/',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/merchandise/views/panel/createPromotion.html'
-	}).state('createPromotion.main',{
-		url : '/createPromotion/main',
+	}).state('home.createPromotion.main',{
+		url : 'createPromotion/main',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/merchandise/views/panel/createpromotion/main.html'
-	}).state('createPromotion.product',{
-		url : '/createPromotion/product',
+	}).state('home.createPromotion.product',{
+		url : 'createPromotion/product',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/merchandise/views/panel/createpromotion/applyOnProduct.html'
-	}).state('createPromotion.order',{
-		url : '/createPromotion/order',
+	}).state('home.createPromotion.order',{
+		url : 'createPromotion/order',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/merchandise/views/panel/createpromotion/applyOnOrder.html'
 	});
 }]);

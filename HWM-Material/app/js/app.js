@@ -11,13 +11,14 @@ app.config(['$stateProvider','$locationProvider',function($stateProvider,$locati
 			}]
 		},
 		templateUrl : 'login.html'
-	})
+	});
 }]).run(['$rootScope','$state','$cookieStore','authService',function($rootScope,$state,$cookieStore,authService){
+	$state.go('login');
 	$rootScope.$on('$stateChangeError', function(event, toState,toParams, fromState, fromParams, error) {
 		if(error.unAuthorized) {
-			$state.go("login");
+			$state.go('login');
 		}else if(error.authorized){
-			$state.go('dealer');
+			$state.go('home.dealer');
 		}
 	});
 	authService.user=$cookieStore.get('user');

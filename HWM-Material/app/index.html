@@ -11,8 +11,13 @@
     <link rel="stylesheet" href="font/googleApis.css">
     <link rel="stylesheet" href="css/custom.css">    
 </head>
+<body layout="column">
 
-<body layout="column" ng-controller="LoginController">
+
+<div ui-view></div>
+                
+
+<!-- <body layout="column" ng-controller="LoginController">
     <md-toolbar>
         <div class="md-toolbar-tools">
             <a ui-sref="dealer">
@@ -79,7 +84,7 @@
                 <div ui-view></div>
             </md-content>
         </div>
-    </div>
+    </div> -->
     <!-- Angular Material Dependencies -->
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-ui-router/angular-ui-router.min.js"></script>

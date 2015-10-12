@@ -1,5 +1,5 @@
 angular.module('ecommerceApp.dealer',[]).config(['$stateProvider','$locationProvider',function($stateProvider,$locationProvider){
-	$stateProvider.state('dealer',{
+	$stateProvider.state('home.dealer',{
 		url : '/dealer',
 		resolve:{
 			user:['authService','$q',function(authService,$q){
@@ -7,20 +7,45 @@ angular.module('ecommerceApp.dealer',[]).config(['$stateProvider','$locationProv
 			}]
 		},
 		templateUrl : 'module/dealer/views/dealer.html'
-	}).state('alldealers',{
+	}).state('home.alldealers',{
 		url : '/dealer/all',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/dealers.html'
-	}).state('createDealer',{
+	}).state('home.createDealer',{
 		url : '/dealer/create',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/createDealer.html'
-	}).state('createDealer.company',{
+	}).state('home.createDealer.company',{
 		url : '/company',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/company.html'
-	}).state('createDealer.location',{
+	}).state('home.createDealer.location',{
 		url : '/location',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/location.html'
-	}).state('createDealer.contact',{
+	}).state('home.createDealer.contact',{
 		url : '/contact',
+		resolve:{
+			user:['authService','$q',function(authService,$q){
+				return authService.user || $q.reject({unAuthorized:true});
+			}]
+		},
 		templateUrl : 'module/dealer/views/contact.html'
 	});
 }]);
