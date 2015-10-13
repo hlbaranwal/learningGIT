@@ -4,7 +4,7 @@ angular.module('ecommerceApp.services',[]).factory('authService',['AUTH_ENDPOINT
 
 	auth.login = function(username,password){
 		return $http.post(AUTH_ENDPOINT,{USERNAME:username,PASSWORD:password}).then(function(response,status){
-			auth.user=response.data.USERNAME;
+			auth.user=response.config.data.USERNAME;
 			$cookieStore.put('user',auth.user);
 			return auth.user;
 		});
@@ -19,5 +19,5 @@ angular.module('ecommerceApp.services',[]).factory('authService',['AUTH_ENDPOINT
 
 	return auth;
 
-}]).value('AUTH_ENDPOINT','https://localhost:8443/expensemanager/control/login')
-   .value('LOGOUT_ENDPOINT','https://localhost:8443/expensemanager/control/logout');
+}]).value('AUTH_ENDPOINT','https://localhost:8443/webtools/control/login')
+   .value('LOGOUT_ENDPOINT','https://localhost:8443/webtools/control/logout');

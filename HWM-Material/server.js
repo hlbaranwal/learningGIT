@@ -223,7 +223,7 @@ StaticServlet.prototype.writeDirectoryIndex_ = function(req, res, path, files) {
     return;
   }
   res.write('<!doctype html>\n');
-  res.write('<title>' + escapeHtml(path)+'Here We are' + '</title>\n');
+  res.write('<title>' + escapeHtml(path)+ '</title>\n');
   res.write('<style>\n');
   res.write('  ol { list-style-type: none; font-size: 1.2em; }\n');
   res.write('</style>\n');
